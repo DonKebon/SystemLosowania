@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemLosowania.Views.AllClassesPage"
+             Title="AllClassesPage"
+             x:Name="contentPage">
+
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="Witam w aplikacji do losowania osoby do odpowiedzi" x:Name="Headbar"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/AllClassesPage.css" />
+    </ContentPage.Resources>
+
+    <CollectionView x:Name="collectionViewClasses"
+                    ItemsSource="{Binding All_Classes}"
+                    SelectionMode="Single" 
+                    SelectionChanged="ClassChoice" 
+                    ItemsLayout="VerticalList">
+
+        <CollectionView.Header>
+            <HorizontalStackLayout x:Name="Header" HorizontalOptions="Center" >
+                <Label Text="Dodaj własną klasę: "/>
+                <Entry Placeholder="Nazwa klasy" x:Name="AddClassEntry" Text="{Binding ClassName}"/>
+                <Button x:Name="AddClassButton" Text="Dodaj klasę" Clicked="AddClass_Clicked" />
+            </HorizontalStackLayout>
+        </CollectionView.Header>
+
+
+        <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame x:Name="FrameOfLabels">
+                        <Label MaximumWidthRequest="500" x:Name="labele" Text="{Binding ClassName}"></Label>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

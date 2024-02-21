@@ -1,0 +1,43 @@
+﻿^contentPage {
+    background-color: rgb(44, 43, 43);
+    color: white;
+}
+
+#Headbar {
+    color: #0ba713;
+    font-size: 35;
+    text-align: center;
+}
+
+#Header {
+    font-size: 40;
+    margin-top: 40;
+    margin-left: 5
+}
+#AddClassEntry {
+    min-width: 200;
+}
+#AddClassButton {
+    width: 350;
+    border: 2 solid rgb(20, 20, 20);
+    background-color: #0ba713;
+    color: rgb(20, 20, 20);
+    padding: 3;
+    border-radius: 15;
+    font-size: 30;
+    margin-top: 10;
+}
+
+#FrameOfLabels {
+    background-color: rgb(44, 43, 43);
+    border-color: rgb(44, 43, 43);
+}
+
+#FrameOfLabels > label {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    text-align: center;
+    font-size: 35;
+    width: 500;
+    margin-top: 10;
+}

@@ -1,0 +1,50 @@
+﻿^contentPage {
+    background-color: rgb(44, 43, 43);
+    color: white;
+}
+
+#Headbar {
+    color: #0ba713;
+    font-size: 35;
+    text-align: center;
+}
+.Buttons {
+    width: 350;
+    border: 2 solid rgb(20, 20, 20);
+    background-color: #0ba713;
+    color: rgb(20, 20, 20);
+    padding: 3;
+    border-radius: 15;
+    font-size: 30;
+    margin-top: 10;
+}
+
+#RandomPersonButton {
+    font-size: 20;
+    position: absolute;
+    margin-left: 250;
+    width: 250;
+}
+
+#HappyNumbers {
+    font-size: 20;
+    position: absolute;
+    margin-left: 1150;
+}
+
+#AddPerson{
+    font-size: 15;
+    min-width: 200;
+}
+
+.PersonDataLabels{
+    font-size: 20
+}
+#PersonName {
+    width: 100;
+}
+#aaa {
+    min-width: 100;
+    min-height: 100;
+    font-size: 70;
+}

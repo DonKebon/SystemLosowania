@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemLosowania.Views.ClassPage"
+             Title="ClassPage"
+             x:Name="contentPage">
+
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="Witaj w zarządzaniu klasą" x:Name="Headbar"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/ClassPage.css" />
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout x:Name="Buttons">
+                    <Entry x:Name="AddPerson" Text="{Binding PersonName}" Placeholder="Podaj nazwe osoby"/>
+                    <Button StyleClass="Buttons" Text="Dodaj osobę do klasy" Clicked="AddPerson_Clicked" />
+                    <Button StyleClass="Buttons" Text="Usuń klasę" Clicked="ClassDelete_Clicked"/>
+                    <Button StyleClass="Buttons" x:Name="RandomPersonButton" Text="Wylosuj osobę" Clicked="RandomPerson_CLicked" />
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout x:Name="HappyNumbers">
+                    <Label Text="Szczęśliwy numerek to: "/>
+                    <Label x:Name="HappyNumber"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <CollectionView 
+                x:Name="collectionViewPersons" 
+                ItemsSource="{Binding All_Classes}"
+                SelectionMode="Single" 
+                SelectionChanged="PersonEdit" 
+                ItemsLayout="VerticalList">
+            
+            
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <Label x:Name="aaa" Text="{Binding Count, StringFormat='{0}.'}" />
+                            <Label x:Name="PersonName" StyleClass="PersonDataLabels" Text="{Binding PersonName}" FontSize="Large" WidthRequest="200"/>
+                            <Button StyleClass="Buttons" Text="Usuń osobę z listy" Clicked="DeletePerson_Clicked" Background="#2c2b2b" TextColor="#0ba713" BindingContext="{Binding .}"/>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
