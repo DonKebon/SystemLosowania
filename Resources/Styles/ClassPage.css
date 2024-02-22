@@ -22,18 +22,17 @@
 #RandomPersonButton {
     font-size: 20;
     position: absolute;
-    margin-left: 250;
+    margin-left: 335;
     width: 250;
 }
 
 #HappyNumbers {
     font-size: 20;
     position: absolute;
-    margin-left: 1150;
+    margin-left: 1250;
 }
 
 #AddPerson{
-    font-size: 15;
     min-width: 200;
 }
 
@@ -42,6 +41,8 @@
 }
 #PersonName {
     width: 100;
+    font-size: 20;
+
 }
 #aaa {
     min-width: 100;

@@ -4,7 +4,7 @@
 }
 
 #Headbar {
-    color: red;
+    color: #0ba713;
     font-size: 35;
     text-align: center;
 }
@@ -15,7 +15,7 @@
     margin-left: 5
 }
 #AddClassEntry {
-    min-width: 200;
+    min-width: 300;
 }
 #AddClassButton {
     width: 350;
